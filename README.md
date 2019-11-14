@@ -7,9 +7,23 @@ compile into a single shared object (.so) that are loaded by the iHQP
 solver. The rational for this decision is outlined later in this
 readme.
 
-# Motivation
+## Dependencies 
+For the moment:
+1. Eigen3 (for linear algebra) [http://eigen.tuxfamily.org](http://eigen.tuxfamily.org)
 
-## Reinventing the wheel
+## Motivation
+
+### Goals
+The implementation follows few goals:
+1. Keep it light-weighted, easy to use, easy to deploy
+2. Reduce the dependencies to bare minimum
+3. Make it compliant easy to adjust if the end user wants to use it
+   - as a binary
+   - in a component based system (e.g., OROCOS, Microblx, etc.)
+   - by conforming to certain standards
+4. In short, don't annoy the users!
+
+### Reinventing the wheel
 There are already many many qp based packages for robot control by
 different research groups with exceptionally high quality
 implementations. However, most of these works are rather tailored to
@@ -36,7 +50,7 @@ different manner. Namely,
    to reshape and refactor it to make it compatible to specific
    requirements.
 
-## On this implementation
+### On this implementation
 Current work borrows the idea of task/constraint library from the
 OpenSoT but compiles each of them into individual `.so` files. A
 particular QP based solver/implementation then loads these
@@ -51,3 +65,23 @@ facilitated as we do not enforce any limitation on the end-users; iii)
 Composability and reusability are alleviated; and iv) It facilitate
 the conformity to particular standards, should the library is used for
 specific projects.
+
+## On RobMoSys
+This project is being developed in the context of an ITP in RobMoSys
+project. Consequently it should adhere to RobMoSys standards and it
+should _conform_ to it. The code generation aspect shall be taken care
+of in the iHQP implementation. As for the conformity, once it is
+decided what it exactly means, a separate branch will be taking care
+of it. It is my goal to keep the master branch as a generic,
+stand-alone, ready to be used set of tasks and constraints.
+
+## TODO
+1. Give it a name!
+2. In the spirit of code first, think later (!) I am adopting a
+   structure that seems reasonable. However, the structure of the
+   repository should be rethinked if necessary.
+3. Consider suitable namespaces. It is my goal to limit the use of
+   namespaces to the absolute necessary only. I do not wish to create
+   eye sores for the users just so that I put my library name in front
+   of their eyes.
+4. TBA
