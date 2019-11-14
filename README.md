@@ -2,9 +2,10 @@
 The tasks and constraints that are the building blocks of a generic QP solver
 
 This repository contains the code for individual tasks and constraints
-that constitute the iHQP. Each task or constraint will compile into a
-single shared object (.so) that are loaded by the iHQP solver. The
-rational for this decision is outlined later in this readme.
+that constitute a QP stack (e.g., iHQP). Each task or constraint will
+compile into a single shared object (.so) that are loaded by the iHQP
+solver. The rational for this decision is outlined later in this
+readme.
 
 # Motivation
 
