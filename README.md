@@ -34,3 +34,19 @@ different manner. Namely,
    time being it's not open source. Consequently, it is not so trivial
    to reshape and refactor it to make it compatible to specific
    requirements.
+
+## On this implementation
+Current work borrows the idea of task/constraint library from the
+OpenSoT but compiles each of them into individual `.so` files. A
+particular QP based solver/implementation then loads these
+tasks/constraints on demand. Hence, the users are not forced to adopt
+anything forced by us.
+
+Such approach that mimics the component paradigm, grants some
+conveniences. i) The code generation complexity for the `iHQP` solver
+(or any other approach for that matter) will be reduced considerably;
+ii) Stand-alone use of this library for the community is also
+facilitated as we do not enforce any limitation on the end-users; iii)
+Composability and reusability are alleviated; and iv) It facilitate
+the conformity to particular standards, should the library is used for
+specific projects.
