@@ -17,7 +17,7 @@ For the moment:
 The implementation follows few goals:
 1. Keep it light-weighted, easy to use, easy to deploy
 2. Reduce the dependencies to bare minimum
-3. Make it compliant easy to adjust if the end user wants to use it
+3. Make it compliant and easy to adjust if the end user wants to use it
    - as a binary
    - in a component based system (e.g., OROCOS, Microblx, etc.)
    - by conforming to certain standards
@@ -41,14 +41,18 @@ different manner. Namely,
    necessarily critical for the end users. This makes its usage on
    stand-alone applications rather cumbersome.
 2. OpenSoT compiles its very rich collection of tasks and constraints
-   into one giant binary. This implementation on the other hand goes
-   for a different idea (more on this below)
+   into one binary. This implementation on the other hand goes for a
+   different idea (more on this below)
 3. While OpenSoT, its sibling projects (e.g., CartesI/O) and all its
    dependencies are available for free as a [debian
    package](https://github.com/ADVRHumanoids/XBotControl), for the
    time being it's not open source. Consequently, it is not so trivial
    to reshape and refactor it to make it compatible to specific
    requirements.
+4. OpenSoT's configuration is rather exhausting and depends on an
+   unhealthy number of yaml files. This is not OpenSoT's fault per se,
+   rather due to its high number of dependencies and to number 1 in
+   this list.
 
 ### On this implementation
 Current work borrows the idea of task/constraint library from the
