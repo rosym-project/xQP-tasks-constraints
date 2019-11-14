@@ -88,4 +88,8 @@ stand-alone, ready to be used set of tasks and constraints.
    namespaces to the absolute necessary only. I do not wish to create
    eye sores for the users just so that I put my library name in front
    of their eyes.
-4. TBA
+4. Consistency check for calling them task or constraint. As it was
+   said by [Kanoun et al.](https://ieeexplore.ieee.org/document/5766760) 
+   _"To call these equations constraints or tasks is just a question of 
+   context."_, however, it is necessary to be consistent regardless.
+5. TBA
