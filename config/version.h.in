@@ -1,0 +1,7 @@
+#ifndef VERSION_H_IN
+#define VERSION_H_IN
+
+#define xQP_VERSION_MAJOR @xQP_VERSION_MAJOR@
+#define xQP_VERSION_MINOR @xQP_VERSION_MINOR@
+
+#endif /* VERSION_H_IN */
