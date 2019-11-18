@@ -20,7 +20,8 @@ else ()
                         https://eigen.tuxfamily.org/dox/TopicCMakeGuide.html")
 endif ()
 
-install(FILES "${PROJECT_BINARY_DIR}/version.h"
-  DESTINATION include)
+set(headers "${PROJECT_BINARY_DIR}/version.h")
 
-# target_link_libraries (xxx Eigen3::Eigen)
+install(FILES ${headers} DESTINATION include)
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src)
