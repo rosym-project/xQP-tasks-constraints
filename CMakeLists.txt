@@ -22,6 +22,8 @@ endif ()
 
 set(headers "${PROJECT_BINARY_DIR}/version.h")
 
+#include_directories(${NESTED_DIRS})
+
 install(FILES ${headers} DESTINATION include)
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src)
