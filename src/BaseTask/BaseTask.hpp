@@ -39,6 +39,14 @@ public:
      */
     virtual bool compute_cost_function() = 0;
 
+    /**
+     * @brief do_sanity_check
+     * @return
+     * This function performs sanity check on the inputs. E.g., checks the size
+     * the size consistency of data (and more?)
+     */
+    virtual bool do_sanity_check() = 0;
+
 
     /**
      * @brief getConstraintMatrix
