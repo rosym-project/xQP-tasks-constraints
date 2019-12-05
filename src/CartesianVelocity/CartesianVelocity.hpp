@@ -8,7 +8,7 @@
 #ifndef CARTESIANVELOCITY_H
 #define CARTESIANVELOCITY_H
 
-#include <BaseTask.hpp>
+#include <xQP/BaseTask.hpp>
 
 class CartesianVelocity : public BaseTask
 {
