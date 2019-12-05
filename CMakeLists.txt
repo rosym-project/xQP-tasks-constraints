@@ -20,11 +20,7 @@ else ()
                         https://eigen.tuxfamily.org/dox/TopicCMakeGuide.html")
 endif ()
 
-set(headers "${PROJECT_BINARY_DIR}/version.h")
 
-#include_directories(${NESTED_DIRS})
-
-
-install(FILES ${headers} DESTINATION include)
+install(FILES ${PROJECT_BINARY_DIR}/version.h DESTINATION include/${PROJECT_NAME})
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src)
