@@ -8,6 +8,20 @@
 #ifndef CARTESIANVELOCITY_H
 #define CARTESIANVELOCITY_H
 
+#include <BaseTask.hpp>
+
+class CartesianVelocity : public BaseTask
+{
+public:
+    CartesianVelocity();
+    virtual ~CartesianVelocity();
+
+    bool compute_cost_function() override;
+    bool do_sanity_check() override;
+    bool update(const Eigen::VectorXd &q) override;
+};
+
+
 
 
 #endif /* CARTESIANVELOCITY_H */
