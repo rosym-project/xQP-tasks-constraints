@@ -121,9 +121,19 @@ protected:
      */
     int task_size;
 
-    //TODO should the regularization factor be here?
-    //TODO should the floating base boolean be declared here?
+    /**
+     * @brief regularization_factor
+     * Regularization factor to bound the solver output near singularities
+     */
+    double regularization_factor;
 
+    /**
+     * @brief is_floating_based
+     * If the robot is floating based
+     */
+    bool is_floating_based = false;
+
+    //TODO Note that the folating based criteria for the moment is not implemented
 };
 
 

@@ -21,7 +21,7 @@ public:
     bool update(const Eigen::VectorXd &q) override;
 };
 
-
+// TODO implement floating based stuff
 
 
 #endif /* CARTESIANVELOCITY_H */
