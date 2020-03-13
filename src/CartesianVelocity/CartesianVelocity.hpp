@@ -14,6 +14,7 @@ class CartesianVelocity : public BaseTask
 {
 public:
     CartesianVelocity();
+    CartesianVelocity(std::string name, int hessian);
     virtual ~CartesianVelocity();
 
     bool compute_cost_function() override;

@@ -11,6 +11,23 @@
 #include <Eigen/Core>
 #include <string>
 
+namespace xQP {
+    enum HESSIAN_TYPE {
+        IDENTITY,
+        POSITIVE_DEFINITE,
+        POSITIVE_SEMIDEFINITE,
+        /* inspired by the OpenSoT
+           HST_ZERO,                  // Hessian is zero matrix (i.e. LP formulation).
+           HST_IDENTITY,              // Hessian is identity matrix.
+           HST_POSDEF,                // Hessian is (strictly) positive definite.
+           HST_POSDEF_NULLSPACE,      // Hessian is positive definite on null space of active bounds/constraints.
+           HST_SEMIDEF,               // Hessian is positive semi-definite.
+           HST_UNKNOWN                // Hessian type is unknown.
+         */
+    };
+}
+
+
 /**
  * @brief The BaseTask class
  * This is a pure abstract class that acts as an interface for a generic task.
@@ -132,6 +149,14 @@ protected:
      * If the robot is floating based
      */
     bool is_floating_based = false;
+
+    /**
+     * @brief hessian_type
+     * This class memeber describes the type of the hessian from the enum above.
+     * This is an important class memeber as in certain cases, defining as correct
+     * form will improve the performance (e.g., when it is identity)
+     */
+    int hessian_type;
 
     //TODO Note that the folating based criteria for the moment is not implemented
 };
