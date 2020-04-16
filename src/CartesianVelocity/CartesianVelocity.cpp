@@ -30,6 +30,12 @@ CartesianVelocity::CartesianVelocity(std::string name,
                                                  parse_urdf_verbose,
                                                  kin_dyn_solver);
 
+    if (model==nullptr) {
+        std::cerr<<"Model initialization failed."<<std::endl;
+        // somehow we need to stop the reset rather gracefully
+    }
+
+
 }
 
 bool CartesianVelocity::update(const Eigen::VectorXd &q) {
