@@ -25,7 +25,7 @@ install(FILES ${PROJECT_BINARY_DIR}/version.h DESTINATION include/${PROJECT_NAME
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src)
 
-
-
+find_package(KDMI)
+include_directories(${KDMI_INCLUDE_DIRS})
 add_subdirectory(tests)
 
