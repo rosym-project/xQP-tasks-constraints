@@ -10,6 +10,7 @@
 
 #include <Eigen/Core>
 #include <string>
+#include <KinDynModelFactory.hpp>
 
 namespace xQP {
     enum HESSIAN_TYPE {
@@ -157,6 +158,15 @@ protected:
      * form will improve the performance (e.g., when it is identity)
      */
     int hessian_type;
+
+    /**
+     * @brief model
+     * The kinematic chain/robot model that interfaces with the Kinematic/Dynamic
+     * libraries and solvers. It is basically used to create for performing K/D
+     * type of computations.
+     * TODO decide how to clean this
+     */
+    KinDynModel * model;
 
     //TODO Note that the folating based criteria for the moment is not implemented
 };
