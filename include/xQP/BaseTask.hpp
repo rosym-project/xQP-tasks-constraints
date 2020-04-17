@@ -49,6 +49,10 @@ public:
      */
     virtual bool update(const Eigen::VectorXd & q) = 0;
 
+    /** TODO Either update or compute cost function shoudl be private and
+     * triggered by the other one...
+     */
+
     /**
      * @brief compute_cost_function
      * @return True of all fine, flase otherwise
